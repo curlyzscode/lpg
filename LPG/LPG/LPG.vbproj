@@ -91,10 +91,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="TiaCahyantri.Designer.vb">
       <DependentUpon>TiaCahyantri.vb</DependentUpon>
     </Compile>
     <Compile Include="TiaCahyantri.vb">
+=======
+    <Compile Include="Sekar Nurfadilah.Designer.vb">
+      <DependentUpon>Sekar Nurfadilah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sekar Nurfadilah.vb">
+>>>>>>> 0868bdf9d8ad9f5dff008fec2ef8ff638d05b8e0
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
