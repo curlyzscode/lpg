@@ -48,9 +48,9 @@ Partial Class Pegawai
         Me.tabelpegawai.AllowUserToAddRows = False
         Me.tabelpegawai.AllowUserToResizeRows = False
         Me.tabelpegawai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.tabelpegawai.Location = New System.Drawing.Point(93, 200)
+        Me.tabelpegawai.Location = New System.Drawing.Point(15, 200)
         Me.tabelpegawai.Name = "tabelpegawai"
-        Me.tabelpegawai.Size = New System.Drawing.Size(468, 150)
+        Me.tabelpegawai.Size = New System.Drawing.Size(617, 150)
         Me.tabelpegawai.TabIndex = 31
         '
         'bHapus

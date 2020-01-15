@@ -71,6 +71,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Detail_Transaksi.Designer.vb">
+      <DependentUpon>Detail_Transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_Transaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Konter.Designer.vb">
+      <DependentUpon>Konter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Konter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -112,8 +124,20 @@
     <Compile Include="Pelanggan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Transaksi.Designer.vb">
+      <DependentUpon>Transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Detail_Transaksi.resx">
+      <DependentUpon>Detail_Transaksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Konter.resx">
+      <DependentUpon>Konter.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pelanggan.resx">
       <DependentUpon>Pelanggan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi.resx">
+      <DependentUpon>Transaksi.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

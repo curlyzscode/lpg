@@ -159,6 +159,5 @@ Public Class Pelanggan
             statustombol(True, False, False)
         End If
         hapus_isi()
-
     End Sub
 End Class

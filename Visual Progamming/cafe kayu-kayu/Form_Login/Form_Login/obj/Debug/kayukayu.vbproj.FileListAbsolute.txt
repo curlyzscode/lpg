@@ -11,3 +11,19 @@ D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\obj\Debug\Form_Login.pdb
 D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\obj\Debug\Form_Login.Login.resources
 D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\obj\Debug\Form_Login.Pelanggan.resources
 D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\obj\Debug\Form_Login.Menu.resources
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\bin\Debug\Form_Login.exe.config
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\obj\Debug\Form_Login.exe
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\obj\Debug\Form_Login.xml
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\obj\Debug\Form_Login.pdb
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\obj\Debug\Form_Login.Login.resources
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\obj\Debug\Form_Login.Menu.resources
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\obj\Debug\Form_Login.Resources.resources
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\obj\Debug\Form_Login.Pegawai.resources
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\obj\Debug\Form_Login.Pelanggan.resources
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\obj\Debug\kayukayu.vbproj.GenerateResource.Cache
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\bin\Debug\Form_Login.exe
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\bin\Debug\Form_Login.pdb
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\bin\Debug\Form_Login.xml
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\obj\Debug\Form_Login.Konter.resources
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\obj\Debug\Form_Login.Transaksi.resources
+D:\KUKUKUKUKUKU\Kopitiam_HCG\lpg\Visual Progamming\cafe kayu-kayu\Form_Login\Form_Login\obj\Debug\Form_Login.Detail_Transaksi.resources

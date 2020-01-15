@@ -1,13 +1,13 @@
 ﻿Imports Form_Login.koneksi
 Imports MySql.Data.MySqlClient
 
-Public Class Menu
+Public Class Transaksi
 
-    Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Transaksi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         KoneksiBuka()
         tampildata()
 
-        statusinput(False, False, False, False, False)
+        statusinput(False, False, False)
         statustombol(True, True, True)
     End Sub
 
@@ -17,7 +17,7 @@ Public Class Menu
         Dim query As String
         Dim data As Integer
 
-        query = "select * from menu"
+        query = "select * from transaksi"
         adapter = New MySqlDataAdapter(query, conn)
         dt = New DataTable
         data = adapter.Fill(dt)
@@ -25,11 +25,10 @@ Public Class Menu
         If data > 0 Then
             tabelmenu.DataSource = dt
             tabelmenu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-            tabelmenu.Columns(0).HeaderText = "id_menu"
-            tabelmenu.Columns(1).HeaderText = "nama_menu"
-            tabelmenu.Columns(2).HeaderText = "harga"
-            tabelmenu.Columns(3).HeaderText = "kategori"
-            tabelmenu.Columns(4).HeaderText = "id_konter"
+            tabelmenu.Columns(0).HeaderText = "id_transaksi"
+            tabelmenu.Columns(1).HeaderText = "id_pelanggan"
+            tabelmenu.Columns(2).HeaderText = "id_menu"
+            tabelmenu.Columns(3).HeaderText = "tanggal"
         Else
             tabelmenu.DataSource = Nothing
         End If
@@ -37,71 +36,20 @@ Public Class Menu
 
     Sub hapus_isi()
         tID.Clear()
-        tNama.Clear()
-        tharga.Clear()
-        tKategori.Clear()
-        tKonter.Clear()
+        tPelanggan.Clear()
+        tMenu.Clear()
     End Sub
 
-    Private Sub statusinput(id As Boolean, nama As Boolean, harga As Boolean, kategori As Boolean, konter As Boolean)
+    Private Sub statusinput(id As Boolean, pelanggan As Boolean, menu As Boolean)
         tID.Enabled = id
-        tNama.Enabled = nama
-        tharga.Enabled = harga
-        tKategori.Enabled = kategori
-        tKonter.Enabled = konter
+        tPelanggan.Enabled = pelanggan
+        tMenu.Enabled = menu
     End Sub
 
     Private Sub statustombol(tambah As Boolean, hapus As Boolean, ubah As Boolean)
         bTambah.Enabled = tambah
         bHapus.Enabled = hapus
         bUbah.Enabled = ubah
-    End Sub
-
-    Private Sub bTambah_Click(sender As Object, e As EventArgs) Handles bTambah.Click
-        If bTambah.Text = "&Tambah" Then
-            statusinput(True, True, True, True, True)
-            statustombol(True, True, False)
-            bTambah.Text = "Simpan"
-            bHapus.Text = "Batal"
-        ElseIf bTambah.Text = "Simpan" Then
-            If tID.Text = "" Then
-                MsgBox("ID Harus diisi", MsgBoxStyle.Information, "Information")
-                tID.Focus()
-                Exit Sub
-            ElseIf tNama.Text = "" Then
-                MsgBox("NAMA Harus diisi", MsgBoxStyle.Information, "Information")
-                tNama.Focus()
-                Exit Sub
-            ElseIf tharga.Text = "" Then
-                MsgBox("Harga Menu Harus diisi", MsgBoxStyle.Information, "Information")
-                tharga.Focus()
-                Exit Sub
-            ElseIf tKategori.Text = "" Then
-                MsgBox("Kategori Harus diisi", MsgBoxStyle.Information, "Information")
-                tKategori.Focus()
-                Exit Sub
-            ElseIf tKonter.Text = "" Then
-                MsgBox("Konter Harus diisi", MsgBoxStyle.Information, "Information")
-                tKonter.Focus()
-                Exit Sub
-            End If
-
-            'conn.Open()
-            Try
-                Dim qInsert As String
-                qInsert = "insert into menu (id_menu, nama_menu, harga, kategori, id_konter)"
-                qInsert = qInsert & "VALUES('" & tID.Text & "', '" & tNama.Text & "', '" & tharga.Text & "',  '" & tKategori.Text & "',  '" & tKonter.Text & "' )"
-                CMD.CommandType = CommandType.Text
-                CMD.CommandText = qInsert
-                CMD.Connection = conn
-                CMD.ExecuteNonQuery()
-
-                tampildata()
-            Catch ex As Exception
-                MsgBox("Gagal Simpan" + ex.Message, MsgBoxStyle.Critical, "Terjadi Kesalahan")
-            End Try
-            'conn.Close()
-        End If
     End Sub
 
     Private Sub tabelmenu_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles tabelmenu.CellContentClick
@@ -111,12 +59,51 @@ Public Class Menu
         'tNim.Text = tabelpegawai.Rows.Item(i).Cells(0).Value
         With tabelmenu.Rows.Item(i)
             tID.Text = .Cells(0).Value
-            tNama.Text = .Cells(1).Value
-            tharga.Text = .Cells(2).Value
-            tKategori.Text = .Cells(3).Value
-            tKonter.Text = .Cells(4).Value
+            tPelanggan.Text = .Cells(1).Value
+            tMenu.Text = .Cells(2).Value
+            DateTimePicker1.Value = .Cells(3).Value
         End With
         statustombol(True, True, True)
+    End Sub
+
+    Private Sub bTambah_Click(sender As Object, e As EventArgs) Handles bTambah.Click
+        If bTambah.Text = "&Tambah" Then
+            statusinput(True, True, True)
+            statustombol(True, True, False)
+            bTambah.Text = "Simpan"
+            bHapus.Text = "Batal"
+        ElseIf bTambah.Text = "Simpan" Then
+            If tID.Text = "" Then
+                MsgBox("ID Harus diisi", MsgBoxStyle.Information, "Information")
+                tID.Focus()
+                Exit Sub
+            ElseIf tPelanggan.Text = "" Then
+                MsgBox("ID Pelanggan Harus diisi", MsgBoxStyle.Information, "Information")
+                tPelanggan.Focus()
+                Exit Sub
+            ElseIf tMenu.Text = "" Then
+                MsgBox("ID Menu Harus diisi", MsgBoxStyle.Information, "Information")
+                tMenu.Focus()
+                Exit Sub
+            End If
+
+            'conn.Open()
+            Try
+                Dim qInsert As String
+                qInsert = "insert into transaksi (id_transaksi, id_pelanggan, id_menu, tanggal)"
+                qInsert = qInsert & "VALUES('" & tID.Text & "', '" & tPelanggan.Text & "', '" & tMenu.Text & "', '" & DateTimePicker1.Value.ToString("yyyy-MM-dd") & "' )"
+                CMD.CommandType = CommandType.Text
+                CMD.CommandText = qInsert
+                CMD.Connection = conn
+                CMD.ExecuteNonQuery()
+
+                tampildata()
+                hapus_isi()
+            Catch ex As Exception
+                MsgBox("Gagal Simpan" + ex.Message, MsgBoxStyle.Critical, "Terjadi Kesalahan")
+            End Try
+            'conn.Close()
+        End If
     End Sub
 
     Private Sub bUbah_Click(sender As Object, e As EventArgs) Handles bUbah.Click
@@ -124,11 +111,11 @@ Public Class Menu
             bUbah.Text = "&Simpan"
             bHapus.Text = "Batal"
             statustombol(False, True, True)
-            statusinput(False, True, True, True, True)
+            statusinput(False, True, True)
         ElseIf bUbah.Text = "&Simpan" Then
             Try
                 Dim qUpdate As String
-                qUpdate = "UPDATE menu SET nama_menu='" & tNama.Text & "', harga='" & tharga.Text & "', kategori='" & tKategori.Text & "', id_konter='" & tKonter.Text & "' where id_menu='" & tID.Text & "' "
+                qUpdate = "UPDATE transaksi SET id_pelanggan='" & tPelanggan.Text & "', id_menu='" & tMenu.Text & "', tanggal='" & DateTimePicker1.Value.ToString("yyyy-MM-dd") & "' where id_transaksi='" & tID.Text & "' "
 
                 CMD.CommandType = CommandType.Text
                 CMD.CommandText = qUpdate
@@ -140,7 +127,7 @@ Public Class Menu
 
                 bUbah.Text = "&Ubah"
                 statustombol(True, True, False)
-                statusinput(False, False, False, False, False)
+                statusinput(False, False, False)
                 hapus_isi()
             Catch ex As Exception
                 MsgBox("Gagal Simpan Ubah" + ex.Message, MsgBoxStyle.Critical, "Terjadi Kesalahan")
@@ -154,7 +141,7 @@ Public Class Menu
             If MsgBox("Yakin Mau Dihapus?", MsgBoxStyle.YesNo, "Pertanyaan") = Windows.Forms.DialogResult.Yes Then
                 Try
                     Dim qDelete As String
-                    qDelete = "delete from menu where id_menu='" & tID.Text & "' "
+                    qDelete = "delete from transaksi where id_transaksi='" & tID.Text & "' "
                     CMD.CommandType = CommandType.Text
                     CMD.CommandText = qDelete
                     CMD.Connection = conn
@@ -174,7 +161,7 @@ Public Class Menu
         If bHapus.Text = "Batal" Then
             bHapus.Text = "Hapus"
             bTambah.Text = "&Tambah"
-            statusinput(False, False, False, False, False)
+            statusinput(False, False, False)
             statustombol(True, False, True)
         End If
         hapus_isi()
