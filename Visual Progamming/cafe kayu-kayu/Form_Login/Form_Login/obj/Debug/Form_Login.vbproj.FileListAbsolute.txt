@@ -1,0 +1,11 @@
+D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\bin\Debug\Form_Login.exe.config
+D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\bin\Debug\Form_Login.exe
+D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\bin\Debug\Form_Login.pdb
+D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\bin\Debug\Form_Login.xml
+D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\obj\Debug\Form_Login.Form1.resources
+D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\obj\Debug\Form_Login.Resources.resources
+D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\obj\Debug\Form_Login.vbproj.GenerateResource.Cache
+D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\obj\Debug\Form_Login.exe
+D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\obj\Debug\Form_Login.xml
+D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\obj\Debug\Form_Login.pdb
+D:\KUKUKUKUKUKU\Kopitiam_HCG\Form_Login\Form_Login\obj\Debug\Form_Login.Pegawai.resources
