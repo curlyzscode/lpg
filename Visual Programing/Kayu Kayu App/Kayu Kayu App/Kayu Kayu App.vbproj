@@ -136,6 +136,12 @@
     <Compile Include="refund.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="transaksi.Designer.vb">
       <DependentUpon>transaksi.vb</DependentUpon>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="refund.resx">
       <DependentUpon>refund.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="transaksi.resx">
       <DependentUpon>transaksi.vb</DependentUpon>

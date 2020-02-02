@@ -39,31 +39,32 @@ Partial Class home
         Me.Panel16 = New System.Windows.Forms.Panel()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.Panel17 = New System.Windows.Forms.Panel()
-        Me.CountPenilaian = New System.Windows.Forms.TextBox()
+        Me.CountTransaksi = New System.Windows.Forms.TextBox()
         Me.Panel21 = New System.Windows.Forms.Panel()
         Me.ViewPenilaian = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.CountKaryawan = New System.Windows.Forms.TextBox()
+        Me.CountPegawai = New System.Windows.Forms.TextBox()
         Me.Panel20 = New System.Windows.Forms.Panel()
         Me.ViewPeserta = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Timer = New System.Windows.Forms.Timer(Me.components)
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.CountSubKriteria = New System.Windows.Forms.TextBox()
+        Me.CountKonter = New System.Windows.Forms.TextBox()
         Me.Panel19 = New System.Windows.Forms.Panel()
         Me.ViewSubKriteria = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.CountKriteria = New System.Windows.Forms.TextBox()
+        Me.CountMenu = New System.Windows.Forms.TextBox()
         Me.Panel18 = New System.Windows.Forms.Panel()
         Me.ViewKriteria = New System.Windows.Forms.Label()
         Me.Label = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -73,6 +74,7 @@ Partial Class home
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -106,9 +108,11 @@ Partial Class home
         Me.Panel8.SuspendLayout()
         Me.Panel18.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel26.SuspendLayout()
         Me.Panel27.SuspendLayout()
         Me.Panel10.SuspendLayout()
@@ -186,11 +190,11 @@ Partial Class home
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Lucida Sans Unicode", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Font = New System.Drawing.Font("Josefin Sans", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.Black
-        Me.Label18.Location = New System.Drawing.Point(220, 169)
+        Me.Label18.Location = New System.Drawing.Point(220, 158)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(175, 28)
+        Me.Label18.Size = New System.Drawing.Size(182, 38)
         Me.Label18.TabIndex = 138
         Me.Label18.Text = "PURWAKARTA"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -198,11 +202,11 @@ Partial Class home
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Lucida Sans Unicode", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Josefin Sans", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(260, 111)
+        Me.Label5.Location = New System.Drawing.Point(260, 100)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(93, 42)
+        Me.Label5.Size = New System.Drawing.Size(100, 54)
         Me.Label5.TabIndex = 137
         Me.Label5.Text = "HCG"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -210,13 +214,13 @@ Partial Class home
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Lucida Sans Unicode", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Josefin Sans", 48.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(150, 33)
+        Me.Label4.Location = New System.Drawing.Point(150, 22)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(326, 78)
+        Me.Label4.Size = New System.Drawing.Size(350, 80)
         Me.Label4.TabIndex = 136
-        Me.Label4.Text = "KOPITIEM"
+        Me.Label4.Text = "KOPITIAM"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Panel12
@@ -258,7 +262,7 @@ Partial Class home
         'Panel17
         '
         Me.Panel17.BackColor = System.Drawing.Color.White
-        Me.Panel17.Controls.Add(Me.CountPenilaian)
+        Me.Panel17.Controls.Add(Me.CountTransaksi)
         Me.Panel17.Controls.Add(Me.Panel21)
         Me.Panel17.Controls.Add(Me.Label12)
         Me.Panel17.Location = New System.Drawing.Point(685, 50)
@@ -266,19 +270,19 @@ Partial Class home
         Me.Panel17.Size = New System.Drawing.Size(200, 91)
         Me.Panel17.TabIndex = 207
         '
-        'CountPenilaian
+        'CountTransaksi
         '
-        Me.CountPenilaian.BackColor = System.Drawing.Color.White
-        Me.CountPenilaian.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.CountPenilaian.Font = New System.Drawing.Font("Lucida Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CountPenilaian.ForeColor = System.Drawing.Color.Black
-        Me.CountPenilaian.Location = New System.Drawing.Point(101, 24)
-        Me.CountPenilaian.Name = "CountPenilaian"
-        Me.CountPenilaian.ReadOnly = True
-        Me.CountPenilaian.Size = New System.Drawing.Size(91, 38)
-        Me.CountPenilaian.TabIndex = 136
-        Me.CountPenilaian.Text = "10"
-        Me.CountPenilaian.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.CountTransaksi.BackColor = System.Drawing.Color.White
+        Me.CountTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.CountTransaksi.Font = New System.Drawing.Font("Lucida Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CountTransaksi.ForeColor = System.Drawing.Color.Black
+        Me.CountTransaksi.Location = New System.Drawing.Point(101, 24)
+        Me.CountTransaksi.Name = "CountTransaksi"
+        Me.CountTransaksi.ReadOnly = True
+        Me.CountTransaksi.Size = New System.Drawing.Size(91, 38)
+        Me.CountTransaksi.TabIndex = 136
+        Me.CountTransaksi.Text = "10"
+        Me.CountTransaksi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Panel21
         '
@@ -309,7 +313,7 @@ Partial Class home
         Me.Label12.ForeColor = System.Drawing.Color.Black
         Me.Label12.Location = New System.Drawing.Point(117, 7)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(80, 18)
+        Me.Label12.Size = New System.Drawing.Size(83, 18)
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "Transaksi"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -337,7 +341,7 @@ Partial Class home
         'Panel15
         '
         Me.Panel15.BackColor = System.Drawing.Color.White
-        Me.Panel15.Controls.Add(Me.CountKaryawan)
+        Me.Panel15.Controls.Add(Me.CountPegawai)
         Me.Panel15.Controls.Add(Me.Panel20)
         Me.Panel15.Controls.Add(Me.Label10)
         Me.Panel15.Location = New System.Drawing.Point(470, 50)
@@ -345,19 +349,19 @@ Partial Class home
         Me.Panel15.Size = New System.Drawing.Size(200, 91)
         Me.Panel15.TabIndex = 205
         '
-        'CountKaryawan
+        'CountPegawai
         '
-        Me.CountKaryawan.BackColor = System.Drawing.Color.White
-        Me.CountKaryawan.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.CountKaryawan.Font = New System.Drawing.Font("Lucida Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CountKaryawan.ForeColor = System.Drawing.Color.Black
-        Me.CountKaryawan.Location = New System.Drawing.Point(101, 24)
-        Me.CountKaryawan.Name = "CountKaryawan"
-        Me.CountKaryawan.ReadOnly = True
-        Me.CountKaryawan.Size = New System.Drawing.Size(91, 38)
-        Me.CountKaryawan.TabIndex = 136
-        Me.CountKaryawan.Text = "10"
-        Me.CountKaryawan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.CountPegawai.BackColor = System.Drawing.Color.White
+        Me.CountPegawai.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.CountPegawai.Font = New System.Drawing.Font("Lucida Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CountPegawai.ForeColor = System.Drawing.Color.Black
+        Me.CountPegawai.Location = New System.Drawing.Point(101, 24)
+        Me.CountPegawai.Name = "CountPegawai"
+        Me.CountPegawai.ReadOnly = True
+        Me.CountPegawai.Size = New System.Drawing.Size(91, 38)
+        Me.CountPegawai.TabIndex = 136
+        Me.CountPegawai.Text = "10"
+        Me.CountPegawai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Panel20
         '
@@ -388,7 +392,7 @@ Partial Class home
         Me.Label10.ForeColor = System.Drawing.Color.Black
         Me.Label10.Location = New System.Drawing.Point(130, 6)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(68, 18)
+        Me.Label10.Size = New System.Drawing.Size(71, 18)
         Me.Label10.TabIndex = 0
         Me.Label10.Text = "Pegawai"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -400,7 +404,7 @@ Partial Class home
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.White
-        Me.Panel7.Controls.Add(Me.CountSubKriteria)
+        Me.Panel7.Controls.Add(Me.CountKonter)
         Me.Panel7.Controls.Add(Me.Panel19)
         Me.Panel7.Controls.Add(Me.Label8)
         Me.Panel7.Location = New System.Drawing.Point(252, 50)
@@ -408,19 +412,19 @@ Partial Class home
         Me.Panel7.Size = New System.Drawing.Size(200, 91)
         Me.Panel7.TabIndex = 203
         '
-        'CountSubKriteria
+        'CountKonter
         '
-        Me.CountSubKriteria.BackColor = System.Drawing.Color.White
-        Me.CountSubKriteria.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.CountSubKriteria.Font = New System.Drawing.Font("Lucida Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CountSubKriteria.ForeColor = System.Drawing.Color.Black
-        Me.CountSubKriteria.Location = New System.Drawing.Point(101, 24)
-        Me.CountSubKriteria.Name = "CountSubKriteria"
-        Me.CountSubKriteria.ReadOnly = True
-        Me.CountSubKriteria.Size = New System.Drawing.Size(91, 38)
-        Me.CountSubKriteria.TabIndex = 135
-        Me.CountSubKriteria.Text = "10"
-        Me.CountSubKriteria.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.CountKonter.BackColor = System.Drawing.Color.White
+        Me.CountKonter.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.CountKonter.Font = New System.Drawing.Font("Lucida Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CountKonter.ForeColor = System.Drawing.Color.Black
+        Me.CountKonter.Location = New System.Drawing.Point(101, 24)
+        Me.CountKonter.Name = "CountKonter"
+        Me.CountKonter.ReadOnly = True
+        Me.CountKonter.Size = New System.Drawing.Size(91, 38)
+        Me.CountKonter.TabIndex = 135
+        Me.CountKonter.Text = "10"
+        Me.CountKonter.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Panel19
         '
@@ -451,7 +455,7 @@ Partial Class home
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(139, 7)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(57, 18)
+        Me.Label8.Size = New System.Drawing.Size(60, 18)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Konter"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -479,7 +483,7 @@ Partial Class home
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.White
-        Me.Panel8.Controls.Add(Me.CountKriteria)
+        Me.Panel8.Controls.Add(Me.CountMenu)
         Me.Panel8.Controls.Add(Me.Panel18)
         Me.Panel8.Controls.Add(Me.Label)
         Me.Panel8.Location = New System.Drawing.Point(35, 50)
@@ -487,19 +491,19 @@ Partial Class home
         Me.Panel8.Size = New System.Drawing.Size(200, 91)
         Me.Panel8.TabIndex = 201
         '
-        'CountKriteria
+        'CountMenu
         '
-        Me.CountKriteria.BackColor = System.Drawing.Color.White
-        Me.CountKriteria.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.CountKriteria.Font = New System.Drawing.Font("Lucida Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CountKriteria.ForeColor = System.Drawing.Color.Black
-        Me.CountKriteria.Location = New System.Drawing.Point(100, 24)
-        Me.CountKriteria.Name = "CountKriteria"
-        Me.CountKriteria.ReadOnly = True
-        Me.CountKriteria.Size = New System.Drawing.Size(91, 38)
-        Me.CountKriteria.TabIndex = 134
-        Me.CountKriteria.Text = "10"
-        Me.CountKriteria.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.CountMenu.BackColor = System.Drawing.Color.White
+        Me.CountMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.CountMenu.Font = New System.Drawing.Font("Lucida Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CountMenu.ForeColor = System.Drawing.Color.Black
+        Me.CountMenu.Location = New System.Drawing.Point(100, 24)
+        Me.CountMenu.Name = "CountMenu"
+        Me.CountMenu.ReadOnly = True
+        Me.CountMenu.Size = New System.Drawing.Size(91, 38)
+        Me.CountMenu.TabIndex = 134
+        Me.CountMenu.Text = "10"
+        Me.CountMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Panel18
         '
@@ -530,7 +534,7 @@ Partial Class home
         Me.Label.ForeColor = System.Drawing.Color.Black
         Me.Label.Location = New System.Drawing.Point(144, 7)
         Me.Label.Name = "Label"
-        Me.Label.Size = New System.Drawing.Size(47, 18)
+        Me.Label.Size = New System.Drawing.Size(51, 18)
         Me.Label.TabIndex = 0
         Me.Label.Text = "Menu"
         Me.Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -538,6 +542,7 @@ Partial Class home
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(22, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.PictureBox3)
         Me.Panel2.Controls.Add(Me.Label14)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Label1)
@@ -545,6 +550,17 @@ Partial Class home
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(205, 106)
         Me.Panel2.TabIndex = 211
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(19, 12)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 219
+        Me.PictureBox3.TabStop = False
         '
         'Label14
         '
@@ -574,7 +590,7 @@ Partial Class home
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(69, 17)
+        Me.Label1.Location = New System.Drawing.Point(64, 17)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(87, 21)
         Me.Label1.TabIndex = 7
@@ -621,7 +637,7 @@ Partial Class home
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(69, 17)
+        Me.Label6.Location = New System.Drawing.Point(67, 17)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(45, 21)
         Me.Label6.TabIndex = 7
@@ -632,7 +648,7 @@ Partial Class home
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(28, 12)
+        Me.PictureBox2.Location = New System.Drawing.Point(24, 12)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -642,6 +658,7 @@ Partial Class home
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(154, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.PictureBox1)
         Me.Panel4.Controls.Add(Me.Label16)
         Me.Panel4.Controls.Add(Me.Label7)
         Me.Panel4.Controls.Add(Me.Label9)
@@ -649,6 +666,17 @@ Partial Class home
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(205, 106)
         Me.Panel4.TabIndex = 213
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(21, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 219
+        Me.PictureBox1.TabStop = False
         '
         'Label16
         '
@@ -678,7 +706,7 @@ Partial Class home
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(69, 17)
+        Me.Label9.Location = New System.Drawing.Point(67, 17)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(59, 21)
         Me.Label9.TabIndex = 7
@@ -734,7 +762,7 @@ Partial Class home
         '
         Me.lblUsername.AutoSize = True
         Me.lblUsername.Font = New System.Drawing.Font("Cambria", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUsername.Location = New System.Drawing.Point(70, 33)
+        Me.lblUsername.Location = New System.Drawing.Point(24, 33)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(0, 22)
         Me.lblUsername.TabIndex = 139
@@ -772,7 +800,7 @@ Partial Class home
         '
         Me.lblJam.AutoSize = True
         Me.lblJam.Font = New System.Drawing.Font("Cambria", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJam.Location = New System.Drawing.Point(52, 31)
+        Me.lblJam.Location = New System.Drawing.Point(26, 33)
         Me.lblJam.Name = "lblJam"
         Me.lblJam.Size = New System.Drawing.Size(0, 22)
         Me.lblJam.TabIndex = 139
@@ -839,11 +867,13 @@ Partial Class home
         Me.Panel18.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel26.ResumeLayout(False)
         Me.Panel26.PerformLayout()
         Me.Panel27.ResumeLayout(False)
@@ -867,26 +897,26 @@ Partial Class home
     Friend WithEvents Panel16 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox11 As System.Windows.Forms.PictureBox
     Friend WithEvents Panel17 As System.Windows.Forms.Panel
-    Friend WithEvents CountPenilaian As System.Windows.Forms.TextBox
+    Friend WithEvents CountTransaksi As System.Windows.Forms.TextBox
     Friend WithEvents Panel21 As System.Windows.Forms.Panel
     Friend WithEvents ViewPenilaian As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
     Friend WithEvents Panel15 As System.Windows.Forms.Panel
-    Friend WithEvents CountKaryawan As System.Windows.Forms.TextBox
+    Friend WithEvents CountPegawai As System.Windows.Forms.TextBox
     Friend WithEvents Panel20 As System.Windows.Forms.Panel
     Friend WithEvents ViewPeserta As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Timer As System.Windows.Forms.Timer
     Friend WithEvents Panel7 As System.Windows.Forms.Panel
-    Friend WithEvents CountSubKriteria As System.Windows.Forms.TextBox
+    Friend WithEvents CountKonter As System.Windows.Forms.TextBox
     Friend WithEvents Panel19 As System.Windows.Forms.Panel
     Friend WithEvents ViewSubKriteria As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Panel14 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox8 As System.Windows.Forms.PictureBox
     Friend WithEvents Panel8 As System.Windows.Forms.Panel
-    Friend WithEvents CountKriteria As System.Windows.Forms.TextBox
+    Friend WithEvents CountMenu As System.Windows.Forms.TextBox
     Friend WithEvents Panel18 As System.Windows.Forms.Panel
     Friend WithEvents ViewKriteria As System.Windows.Forms.Label
     Friend WithEvents Label As System.Windows.Forms.Label
@@ -917,4 +947,6 @@ Partial Class home
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Panel28 As System.Windows.Forms.Panel
     Friend WithEvents lblJam As System.Windows.Forms.Label
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

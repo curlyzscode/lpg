@@ -12,7 +12,6 @@ Public Class menukonter
         txtStok.Enabled = stok
         cmbIdKonter.Enabled = idkonter
         txtUsername.Enabled = username
-        dtpWaktu.Enabled = waktu
     End Sub
 
     Private Sub statustombol(tambah As Boolean, simpan As Boolean, edit As Boolean, hapus As Boolean, batal As Boolean)
@@ -39,7 +38,7 @@ Public Class menukonter
         Dim query As String
         Dim data As Integer
 
-        query = "select id_menu, nama_menu, harga_jual, harga_konter, kategori, stok, id_konter, username, waktu_input from menu "
+        query = "select id_menu, nama_menu, harga_jual, harga_konter, kategori, stok, id_konter from menu "
         adapter = New MySqlDataAdapter(query, conn)
         dt = New DataTable
         data = adapter.Fill(dt)
@@ -54,8 +53,6 @@ Public Class menukonter
             dgvMenu.Columns(4).HeaderText = "Kategori"
             dgvMenu.Columns(5).HeaderText = "Stok"
             dgvMenu.Columns(6).HeaderText = "ID Konter"
-            dgvMenu.Columns(7).HeaderText = "Username"
-            dgvMenu.Columns(8).HeaderText = "Waktu"
         Else
             dgvMenu.DataSource = Nothing
         End If
@@ -98,7 +95,7 @@ Public Class menukonter
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         statustombol(False, True, False, False, True)
         statusinput(True, True, True, True, True, True, True, False, False)
-        txtIdMenu.Focus()
+        cmbIdKonter.Focus()
     End Sub
 
     Private Sub txtHargaJual_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtHargaJual.KeyPress
@@ -111,28 +108,6 @@ Public Class menukonter
 
     Private Sub txtStok_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtStok.KeyPress
         If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
-    End Sub
-
-    Private Sub txtHargaJual_TextChanged(sender As Object, e As EventArgs) Handles txtHargaJual.TextChanged
-        formatUang(txtHargaJual)
-    End Sub
-
-    Private Sub txtHargaKonter_TextChanged(sender As Object, e As EventArgs) Handles txtHargaKonter.TextChanged
-        formatUang(txtHargaKonter)
-    End Sub
-
-    Public Sub formatUang(ByVal Text As TextBox)
-        If Len(Text.Text) > 0 Then
-            Text.Text = FormatNumber(CDbl(Text.Text), 0)
-            Dim x As Double = Text.SelectionStart.ToString
-            If x = 0 Then
-                Text.SelectionStart = Len(Text.Text)
-                Text.SelectionLength = 0
-            Else
-                Text.SelectionStart = x
-                Text.SelectionLength = 0
-            End If
-        End If
     End Sub
 
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
@@ -164,21 +139,13 @@ Public Class menukonter
             MsgBox("ID Konter Harus Dipilih", MsgBoxStyle.Information, "Information")
             cmbIdKonter.Focus()
             Exit Sub
-        ElseIf txtUsername.Text = "" Then
-            MsgBox("Username Harus diisi", MsgBoxStyle.Information, "Information")
-            txtUsername.Focus()
-            Exit Sub
-        ElseIf dtpWaktu.Text = "" Then
-            MsgBox("Alamat Harus diisi", MsgBoxStyle.Information, "Information")
-            dtpWaktu.Focus()
-            Exit Sub
         End If
 
         Try
             KoneksiBuka()
 
             Dim qInsert As String
-            qInsert = "insert into menu (id_menu, nama_menu, harga_jual, harga_konter, kategori, stok, id_konter, username, waktu_input) VALUES ('" & txtIdMenu.Text & "', '" & txtNamaMenu.Text & "', '" & txtHargaJual.Text & "', '" & txtHargaKonter.Text & "','" & cmbKategori.Text & "', '" & txtStok.Text & "','" & cmbIdKonter.Text & "','" & txtUsername.Text & "', '" & dtpWaktu.Value.ToString("yyyy-MM-dd") & "')"
+            qInsert = "insert into menu (id_menu, nama_menu, harga_jual, harga_konter, kategori, stok, id_konter, username_input, waktu_input) VALUES ('" & txtIdMenu.Text & "', '" & txtNamaMenu.Text & "', '" & txtHargaJual.Text & "', '" & txtHargaKonter.Text & "','" & cmbKategori.Text & "', '" & txtStok.Text & "','" & cmbIdKonter.Text & "','" & txtUsername.Text & "', '" & Format(Now, "yyyy-MM-dd HH:mm:ss") & "')"
             cmd.CommandType = CommandType.Text
             cmd.CommandText = qInsert
             cmd.Connection = conn
@@ -202,14 +169,14 @@ Public Class menukonter
             btnEdit.Text = "&Simpan"
 
             statustombol(False, False, True, False, True)
-            statusinput(False, True, True, True, True, True, True, False, False)
+            statusinput(False, True, True, True, True, True, False, False, False)
 
         ElseIf btnEdit.Text = "&Simpan" Then
             btnEdit.Text = "&Edit"
             Try
                 KoneksiBuka()
                 Dim qUpdate As String
-                qUpdate = "UPDATE menu SET id_menu='" & txtIdMenu.Text & "', nama_menu='" & txtNamaMenu.Text & "', harga_jual ='" & txtHargaJual.Text & "', harga_konter='" & txtHargaKonter.Text & "', kategori='" & cmbKategori.Text & "', stok ='" & txtStok.Text & "', id_konter='" & cmbIdKonter.Text & "', username='" & txtUsername.Text & "', waktu_input='" & dtpWaktu.Value.ToString("yyyy-MM-dd") & "' where id_menu = '" & txtIdMenu.Text & "'"
+                qUpdate = "UPDATE menu SET id_menu='" & txtIdMenu.Text & "', nama_menu='" & txtNamaMenu.Text & "', harga_jual ='" & txtHargaJual.Text & "', harga_konter='" & txtHargaKonter.Text & "', kategori='" & cmbKategori.Text & "', stok ='" & txtStok.Text & "', id_konter='" & cmbIdKonter.Text & "', username_edit='" & txtUsername.Text & "', waktu_edit='" & Format(Now, "yyyy-MM-dd HH:mm:ss") & "' where id_menu = '" & txtIdMenu.Text & "'"
 
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = qUpdate
@@ -253,6 +220,7 @@ Public Class menukonter
 
     Private Sub btnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
         Try
+            KoneksiTutup()
 
             If btnEdit.Text = "&Simpan" Then
                 btnEdit.Text = "&Edit"
@@ -261,13 +229,14 @@ Public Class menukonter
 
             tampildata()
             txtCari.Text = ""
+            cmbKriteria.Text = "Kategori"
             statustombol(True, True, True, True, True)
             statusinput(False, False, False, False, False, False, False, False, False)
             kondisi_bersih()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        
+
     End Sub
 
     Private Sub DGVPegawai_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvMenu.CellClick
@@ -281,8 +250,6 @@ Public Class menukonter
             cmbKategori.Text = .Cells(4).Value
             txtStok.Text = .Cells(5).Value
             cmbIdKonter.Text = .Cells(6).Value
-            txtUsername.Text = .Cells(7).Value
-            dtpWaktu.Value = .Cells(8).Value
         End With
     End Sub
 
@@ -291,30 +258,221 @@ Public Class menukonter
             MsgBox("Parameter tidak boleh kosong", MsgBoxStyle.Critical, "Info")
             txtCari.Focus()
         Else
-            Try
-                KoneksiBuka()
+            If cmbKriteria.Text = "ID Konter" Then
+                Try
+                    KoneksiBuka()
 
-                Dim qSearch As String
-                qSearch = "select * from menu where nama_menu like '%" & txtCari.Text & "%'"
-                cmd.CommandType = CommandType.Text
-                cmd.CommandText = qSearch
-                cmd.Connection = conn
+                    Dim qSearch As String
+                    qSearch = "select * from menu where id_konter like '%" & txtCari.Text & "%'"
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = qSearch
+                    cmd.Connection = conn
 
-                rd = cmd.ExecuteReader
+                    rd = cmd.ExecuteReader
 
-                Using dt As New DataTable
-                    dt.Load(rd)
-                    If dt.Rows.Count = 0 Then
-                        'DataGridView1.DataSource = Nothing
-                        MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
-                    Else
-                        dgvMenu.AutoGenerateColumns = False
-                        dgvMenu.DataSource = dt
-                    End If
-                End Using
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
+                    Using dt As New DataTable
+                        dt.Load(rd)
+                        If dt.Rows.Count = 0 Then
+                            'DataGridView1.DataSource = Nothing
+                            MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
+                        Else
+                            dgvMenu.AutoGenerateColumns = False
+                            dgvMenu.DataSource = dt
+                        End If
+                    End Using
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+
+            ElseIf cmbKriteria.Text = "ID Menu" Then
+                Try
+                    KoneksiBuka()
+
+                    Dim qSearch As String
+                    qSearch = "select * from menu where id_menu like '%" & txtCari.Text & "%'"
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = qSearch
+                    cmd.Connection = conn
+
+                    rd = cmd.ExecuteReader
+
+                    Using dt As New DataTable
+                        dt.Load(rd)
+                        If dt.Rows.Count = 0 Then
+                            'DataGridView1.DataSource = Nothing
+                            MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
+                        Else
+                            dgvMenu.AutoGenerateColumns = False
+                            dgvMenu.DataSource = dt
+                        End If
+                    End Using
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+
+            ElseIf cmbKriteria.Text = "Nama Menu" Then
+                Try
+                    KoneksiBuka()
+
+                    Dim qSearch As String
+                    qSearch = "select * from menu where nama_menu like '%" & txtCari.Text & "%'"
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = qSearch
+                    cmd.Connection = conn
+
+                    rd = cmd.ExecuteReader
+
+                    Using dt As New DataTable
+                        dt.Load(rd)
+                        If dt.Rows.Count = 0 Then
+                            'DataGridView1.DataSource = Nothing
+                            MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
+                        Else
+                            dgvMenu.AutoGenerateColumns = False
+                            dgvMenu.DataSource = dt
+                        End If
+                    End Using
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+
+            ElseIf cmbKriteria.Text = "Harga Jual" Then
+                Try
+                    KoneksiBuka()
+
+                    Dim qSearch As String
+                    qSearch = "select * from menu where harga_jual like '%" & txtCari.Text & "%'"
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = qSearch
+                    cmd.Connection = conn
+
+                    rd = cmd.ExecuteReader
+
+                    Using dt As New DataTable
+                        dt.Load(rd)
+                        If dt.Rows.Count = 0 Then
+                            'DataGridView1.DataSource = Nothing
+                            MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
+                        Else
+                            dgvMenu.AutoGenerateColumns = False
+                            dgvMenu.DataSource = dt
+                        End If
+                    End Using
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+
+            ElseIf cmbKriteria.Text = "Harga Konter" Then
+                Try
+                    KoneksiBuka()
+
+                    Dim qSearch As String
+                    qSearch = "select * from menu where harga_konter like '%" & txtCari.Text & "%'"
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = qSearch
+                    cmd.Connection = conn
+
+                    rd = cmd.ExecuteReader
+
+                    Using dt As New DataTable
+                        dt.Load(rd)
+                        If dt.Rows.Count = 0 Then
+                            'DataGridView1.DataSource = Nothing
+                            MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
+                        Else
+                            dgvMenu.AutoGenerateColumns = False
+                            dgvMenu.DataSource = dt
+                        End If
+                    End Using
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+
+            ElseIf cmbKriteria.Text = "Stok" Then
+                Try
+                    KoneksiBuka()
+
+                    Dim qSearch As String
+                    qSearch = "select * from menu where stok like '%" & txtCari.Text & "%'"
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = qSearch
+                    cmd.Connection = conn
+
+                    rd = cmd.ExecuteReader
+
+                    Using dt As New DataTable
+                        dt.Load(rd)
+                        If dt.Rows.Count = 0 Then
+                            'DataGridView1.DataSource = Nothing
+                            MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
+                        Else
+                            dgvMenu.AutoGenerateColumns = False
+                            dgvMenu.DataSource = dt
+                        End If
+                    End Using
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+
+            ElseIf cmbKriteria.Text = "Kategori" Then
+                Try
+                    KoneksiBuka()
+
+                    Dim qSearch As String
+                    qSearch = "select * from menu where kategori like '%" & txtCari.Text & "%'"
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = qSearch
+                    cmd.Connection = conn
+
+                    rd = cmd.ExecuteReader
+
+                    Using dt As New DataTable
+                        dt.Load(rd)
+                        If dt.Rows.Count = 0 Then
+                            'DataGridView1.DataSource = Nothing
+                            MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
+                        Else
+                            dgvMenu.AutoGenerateColumns = False
+                            dgvMenu.DataSource = dt
+                        End If
+                    End Using
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            End If
         End If
     End Sub
+
+    Sub CariKode()
+        Try
+            KoneksiBuka()
+
+            cmd = New MySqlCommand
+            cmd.Connection = conn
+            str = "select * from menu where left(id_konter,1) = '" & cmbIdKonter.Text & "' in (select max(id_konter) from menu) order by id_konter DESC"
+            cmd.CommandText = str
+
+            rd = cmd.ExecuteReader
+
+            rd.Read()
+
+            If Not rd.HasRows Then
+                txtIdMenu.Text = cmbIdKonter.Text + "0001"
+            Else
+                If Microsoft.VisualBasic.Left(rd.GetString(0), 6) <> cmbIdKonter.Text Then
+                    txtIdMenu.Text = cmbIdKonter.Text + "0001"
+                Else
+                    txtIdMenu.Text = rd.Item("id_konter") + 1
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub cmbIdKonter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbIdKonter.SelectedIndexChanged
+        Call CariKode()
+    End Sub
+
 End Class

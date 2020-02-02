@@ -23,9 +23,9 @@ Partial Class menukonter
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(menukonter))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.cmbIdKonter = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtHargaJual = New System.Windows.Forms.TextBox()
@@ -53,10 +53,8 @@ Partial Class menukonter
         Me.txtStok = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtUsername = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.dtpWaktu = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmbKriteria = New System.Windows.Forms.ComboBox()
         CType(Me.dgvMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
@@ -67,16 +65,16 @@ Partial Class menukonter
         '
         Me.cmbIdKonter.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbIdKonter.FormattingEnabled = True
-        Me.cmbIdKonter.Location = New System.Drawing.Point(702, 90)
+        Me.cmbIdKonter.Location = New System.Drawing.Point(165, 61)
         Me.cmbIdKonter.Name = "cmbIdKonter"
         Me.cmbIdKonter.Size = New System.Drawing.Size(122, 23)
-        Me.cmbIdKonter.TabIndex = 248
+        Me.cmbIdKonter.TabIndex = 239
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(579, 92)
+        Me.Label4.Location = New System.Drawing.Point(42, 63)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(60, 15)
         Me.Label4.TabIndex = 249
@@ -88,7 +86,7 @@ Partial Class menukonter
         Me.txtHargaJual.BackColor = System.Drawing.Color.White
         Me.txtHargaJual.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHargaJual.ForeColor = System.Drawing.Color.Black
-        Me.txtHargaJual.Location = New System.Drawing.Point(165, 122)
+        Me.txtHargaJual.Location = New System.Drawing.Point(165, 148)
         Me.txtHargaJual.MaxLength = 10
         Me.txtHargaJual.Name = "txtHargaJual"
         Me.txtHargaJual.Size = New System.Drawing.Size(136, 23)
@@ -98,7 +96,7 @@ Partial Class menukonter
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(42, 123)
+        Me.Label3.Location = New System.Drawing.Point(42, 149)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 15)
         Me.Label3.TabIndex = 248
@@ -110,16 +108,16 @@ Partial Class menukonter
         Me.cmbKategori.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbKategori.FormattingEnabled = True
         Me.cmbKategori.Items.AddRange(New Object() {"Makanan", "Minuman"})
-        Me.cmbKategori.Location = New System.Drawing.Point(165, 180)
+        Me.cmbKategori.Location = New System.Drawing.Point(702, 90)
         Me.cmbKategori.Name = "cmbKategori"
         Me.cmbKategori.Size = New System.Drawing.Size(122, 23)
-        Me.cmbKategori.TabIndex = 246
+        Me.cmbKategori.TabIndex = 248
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(42, 182)
+        Me.Label2.Location = New System.Drawing.Point(579, 92)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 15)
         Me.Label2.TabIndex = 245
@@ -131,7 +129,7 @@ Partial Class menukonter
         Me.txtNamaMenu.BackColor = System.Drawing.Color.White
         Me.txtNamaMenu.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNamaMenu.ForeColor = System.Drawing.Color.Black
-        Me.txtNamaMenu.Location = New System.Drawing.Point(165, 93)
+        Me.txtNamaMenu.Location = New System.Drawing.Point(165, 119)
         Me.txtNamaMenu.MaxLength = 50
         Me.txtNamaMenu.Name = "txtNamaMenu"
         Me.txtNamaMenu.Size = New System.Drawing.Size(338, 23)
@@ -141,7 +139,7 @@ Partial Class menukonter
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(40, 91)
+        Me.Label1.Location = New System.Drawing.Point(40, 117)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(73, 15)
         Me.Label1.TabIndex = 244
@@ -156,7 +154,7 @@ Partial Class menukonter
         Me.btnCari.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCari.ForeColor = System.Drawing.Color.White
         Me.btnCari.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnCari.Location = New System.Drawing.Point(561, 491)
+        Me.btnCari.Location = New System.Drawing.Point(692, 493)
         Me.btnCari.Name = "btnCari"
         Me.btnCari.Size = New System.Drawing.Size(106, 28)
         Me.btnCari.TabIndex = 238
@@ -254,7 +252,7 @@ Partial Class menukonter
         Me.txtIdMenu.BackColor = System.Drawing.Color.White
         Me.txtIdMenu.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtIdMenu.ForeColor = System.Drawing.Color.Black
-        Me.txtIdMenu.Location = New System.Drawing.Point(165, 64)
+        Me.txtIdMenu.Location = New System.Drawing.Point(165, 90)
         Me.txtIdMenu.MaxLength = 10
         Me.txtIdMenu.Name = "txtIdMenu"
         Me.txtIdMenu.Size = New System.Drawing.Size(168, 23)
@@ -264,7 +262,7 @@ Partial Class menukonter
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(41, 64)
+        Me.Label20.Location = New System.Drawing.Point(41, 90)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(54, 15)
         Me.Label20.TabIndex = 241
@@ -278,27 +276,27 @@ Partial Class menukonter
         Me.dgvMenu.AllowUserToResizeColumns = False
         Me.dgvMenu.AllowUserToResizeRows = False
         Me.dgvMenu.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvMenu.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvMenu.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvMenu.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvMenu.DefaultCellStyle = DataGridViewCellStyle8
         Me.dgvMenu.EnableHeadersVisualStyles = False
         Me.dgvMenu.Location = New System.Drawing.Point(44, 283)
         Me.dgvMenu.Name = "dgvMenu"
         Me.dgvMenu.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvMenu.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvMenu.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.dgvMenu.Size = New System.Drawing.Size(835, 203)
         Me.dgvMenu.TabIndex = 236
         '
@@ -343,7 +341,7 @@ Partial Class menukonter
         '
         Me.txtCari.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCari.ForeColor = System.Drawing.Color.Gray
-        Me.txtCari.Location = New System.Drawing.Point(45, 492)
+        Me.txtCari.Location = New System.Drawing.Point(176, 494)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(516, 26)
         Me.txtCari.TabIndex = 237
@@ -364,7 +362,7 @@ Partial Class menukonter
         Me.txtHargaKonter.BackColor = System.Drawing.Color.White
         Me.txtHargaKonter.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHargaKonter.ForeColor = System.Drawing.Color.Black
-        Me.txtHargaKonter.Location = New System.Drawing.Point(165, 151)
+        Me.txtHargaKonter.Location = New System.Drawing.Point(165, 177)
         Me.txtHargaKonter.MaxLength = 10
         Me.txtHargaKonter.Name = "txtHargaKonter"
         Me.txtHargaKonter.Size = New System.Drawing.Size(136, 23)
@@ -374,7 +372,7 @@ Partial Class menukonter
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(42, 152)
+        Me.Label6.Location = New System.Drawing.Point(42, 178)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(79, 15)
         Me.Label6.TabIndex = 252
@@ -408,62 +406,42 @@ Partial Class menukonter
         Me.txtUsername.BackColor = System.Drawing.Color.White
         Me.txtUsername.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsername.ForeColor = System.Drawing.Color.Black
-        Me.txtUsername.Location = New System.Drawing.Point(155, 26)
+        Me.txtUsername.Location = New System.Drawing.Point(25, 28)
         Me.txtUsername.MaxLength = 10
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(136, 23)
+        Me.txtUsername.Size = New System.Drawing.Size(139, 23)
         Me.txtUsername.TabIndex = 255
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(32, 27)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(62, 15)
-        Me.Label8.TabIndex = 256
-        Me.Label8.Text = "Username"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(32, 56)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(42, 15)
-        Me.Label9.TabIndex = 258
-        Me.Label9.Text = "Waktu"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'dtpWaktu
-        '
-        Me.dtpWaktu.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpWaktu.Location = New System.Drawing.Point(156, 55)
-        Me.dtpWaktu.Name = "dtpWaktu"
-        Me.dtpWaktu.Size = New System.Drawing.Size(135, 23)
-        Me.dtpWaktu.TabIndex = 259
+        Me.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.txtUsername)
-        Me.GroupBox1.Controls.Add(Me.dtpWaktu)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.GroupBox1.Location = New System.Drawing.Point(582, 123)
+        Me.GroupBox1.Location = New System.Drawing.Point(702, 130)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(297, 92)
+        Me.GroupBox1.Size = New System.Drawing.Size(177, 70)
         Me.GroupBox1.TabIndex = 260
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "User"
+        '
+        'cmbKriteria
+        '
+        Me.cmbKriteria.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbKriteria.FormattingEnabled = True
+        Me.cmbKriteria.Items.AddRange(New Object() {"ID Konter", "ID Menu", "Nama Menu", "Harga Jual", "Harga Konter", "Stok", "Kategori"})
+        Me.cmbKriteria.Location = New System.Drawing.Point(43, 493)
+        Me.cmbKriteria.Name = "cmbKriteria"
+        Me.cmbKriteria.Size = New System.Drawing.Size(131, 27)
+        Me.cmbKriteria.TabIndex = 262
+        Me.cmbKriteria.Text = "Kriteria"
         '
         'menukonter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(920, 532)
+        Me.Controls.Add(Me.cmbKriteria)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txtStok)
         Me.Controls.Add(Me.Label7)
@@ -529,8 +507,6 @@ Partial Class menukonter
     Friend WithEvents txtStok As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents txtUsername As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents dtpWaktu As System.Windows.Forms.DateTimePicker
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents cmbKriteria As System.Windows.Forms.ComboBox
 End Class

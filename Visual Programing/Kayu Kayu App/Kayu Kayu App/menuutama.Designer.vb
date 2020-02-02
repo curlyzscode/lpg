@@ -42,9 +42,11 @@ Partial Class menuutama
         Me.btnPegawai = New System.Windows.Forms.Button()
         Me.btnTransaksi = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnMinimize = New System.Windows.Forms.Button()
+        Me.btnClose = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnAbout = New System.Windows.Forms.Button()
+        Me.btnHelp = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -187,7 +189,7 @@ Partial Class menuutama
         Me.btnRefund.ForeColor = System.Drawing.Color.White
         Me.btnRefund.Image = CType(resources.GetObject("btnRefund.Image"), System.Drawing.Image)
         Me.btnRefund.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRefund.Location = New System.Drawing.Point(14, 279)
+        Me.btnRefund.Location = New System.Drawing.Point(14, 209)
         Me.btnRefund.Name = "btnRefund"
         Me.btnRefund.Size = New System.Drawing.Size(208, 50)
         Me.btnRefund.TabIndex = 3
@@ -205,7 +207,7 @@ Partial Class menuutama
         Me.btnLaporan.ForeColor = System.Drawing.Color.White
         Me.btnLaporan.Image = CType(resources.GetObject("btnLaporan.Image"), System.Drawing.Image)
         Me.btnLaporan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLaporan.Location = New System.Drawing.Point(13, 483)
+        Me.btnLaporan.Location = New System.Drawing.Point(13, 377)
         Me.btnLaporan.Name = "btnLaporan"
         Me.btnLaporan.Size = New System.Drawing.Size(208, 50)
         Me.btnLaporan.TabIndex = 7
@@ -223,7 +225,7 @@ Partial Class menuutama
         Me.btnKonter.ForeColor = System.Drawing.Color.White
         Me.btnKonter.Image = CType(resources.GetObject("btnKonter.Image"), System.Drawing.Image)
         Me.btnKonter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnKonter.Location = New System.Drawing.Point(14, 432)
+        Me.btnKonter.Location = New System.Drawing.Point(14, 336)
         Me.btnKonter.Name = "btnKonter"
         Me.btnKonter.Size = New System.Drawing.Size(208, 50)
         Me.btnKonter.TabIndex = 6
@@ -241,7 +243,7 @@ Partial Class menuutama
         Me.btnMenu.ForeColor = System.Drawing.Color.White
         Me.btnMenu.Image = CType(resources.GetObject("btnMenu.Image"), System.Drawing.Image)
         Me.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnMenu.Location = New System.Drawing.Point(14, 381)
+        Me.btnMenu.Location = New System.Drawing.Point(14, 293)
         Me.btnMenu.Name = "btnMenu"
         Me.btnMenu.Size = New System.Drawing.Size(208, 50)
         Me.btnMenu.TabIndex = 5
@@ -254,7 +256,7 @@ Partial Class menuutama
         Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.InitialImage = Nothing
-        Me.PictureBox1.Location = New System.Drawing.Point(-2, 54)
+        Me.PictureBox1.Location = New System.Drawing.Point(-2, 14)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(255, 108)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -271,7 +273,7 @@ Partial Class menuutama
         Me.btnHomepage.ForeColor = System.Drawing.Color.White
         Me.btnHomepage.Image = CType(resources.GetObject("btnHomepage.Image"), System.Drawing.Image)
         Me.btnHomepage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHomepage.Location = New System.Drawing.Point(14, 177)
+        Me.btnHomepage.Location = New System.Drawing.Point(14, 123)
         Me.btnHomepage.Name = "btnHomepage"
         Me.btnHomepage.Size = New System.Drawing.Size(208, 50)
         Me.btnHomepage.TabIndex = 1
@@ -289,11 +291,11 @@ Partial Class menuutama
         Me.btnPegawai.ForeColor = System.Drawing.Color.White
         Me.btnPegawai.Image = CType(resources.GetObject("btnPegawai.Image"), System.Drawing.Image)
         Me.btnPegawai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPegawai.Location = New System.Drawing.Point(14, 330)
+        Me.btnPegawai.Location = New System.Drawing.Point(14, 250)
         Me.btnPegawai.Name = "btnPegawai"
         Me.btnPegawai.Size = New System.Drawing.Size(208, 50)
         Me.btnPegawai.TabIndex = 4
-        Me.btnPegawai.Text = "     Pegawai"
+        Me.btnPegawai.Text = "    Pegawai"
         Me.btnPegawai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnPegawai.UseVisualStyleBackColor = False
         '
@@ -307,7 +309,7 @@ Partial Class menuutama
         Me.btnTransaksi.ForeColor = System.Drawing.Color.White
         Me.btnTransaksi.Image = CType(resources.GetObject("btnTransaksi.Image"), System.Drawing.Image)
         Me.btnTransaksi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnTransaksi.Location = New System.Drawing.Point(14, 228)
+        Me.btnTransaksi.Location = New System.Drawing.Point(14, 165)
         Me.btnTransaksi.Name = "btnTransaksi"
         Me.btnTransaksi.Size = New System.Drawing.Size(208, 50)
         Me.btnTransaksi.TabIndex = 2
@@ -318,46 +320,48 @@ Partial Class menuutama
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(8, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.btnMinimize)
         Me.Panel2.Controls.Add(Me.btnMinimized)
-        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.btnClose)
         Me.Panel2.Controls.Add(Me.btnExit)
         Me.Panel2.Location = New System.Drawing.Point(227, -14)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(936, 45)
         Me.Panel2.TabIndex = 8
         '
-        'Button1
+        'btnMinimize
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(840, 17)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(40, 25)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "_"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnMinimize.BackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(22, Byte), Integer))
+        Me.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMinimize.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMinimize.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnMinimize.Location = New System.Drawing.Point(840, 17)
+        Me.btnMinimize.Name = "btnMinimize"
+        Me.btnMinimize.Size = New System.Drawing.Size(40, 25)
+        Me.btnMinimize.TabIndex = 10
+        Me.btnMinimize.Text = "_"
+        Me.btnMinimize.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnClose
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.Button2.Location = New System.Drawing.Point(880, 17)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(40, 25)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "X"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(22, Byte), Integer))
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClose.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnClose.Location = New System.Drawing.Point(880, 17)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(40, 25)
+        Me.btnClose.TabIndex = 11
+        Me.btnClose.Text = "X"
+        Me.btnClose.UseVisualStyleBackColor = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(22, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.btnAbout)
+        Me.Panel1.Controls.Add(Me.btnHelp)
         Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.btnLaporan)
         Me.Panel1.Controls.Add(Me.btnKonter)
@@ -371,6 +375,42 @@ Partial Class menuutama
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(235, 610)
         Me.Panel1.TabIndex = 7
+        '
+        'btnAbout
+        '
+        Me.btnAbout.BackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(22, Byte), Integer))
+        Me.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAbout.FlatAppearance.BorderSize = 0
+        Me.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAbout.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAbout.ForeColor = System.Drawing.Color.White
+        Me.btnAbout.Image = CType(resources.GetObject("btnAbout.Image"), System.Drawing.Image)
+        Me.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAbout.Location = New System.Drawing.Point(13, 467)
+        Me.btnAbout.Name = "btnAbout"
+        Me.btnAbout.Size = New System.Drawing.Size(208, 50)
+        Me.btnAbout.TabIndex = 194
+        Me.btnAbout.Text = "     About"
+        Me.btnAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnAbout.UseVisualStyleBackColor = False
+        '
+        'btnHelp
+        '
+        Me.btnHelp.BackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(22, Byte), Integer))
+        Me.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnHelp.FlatAppearance.BorderSize = 0
+        Me.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHelp.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHelp.ForeColor = System.Drawing.Color.White
+        Me.btnHelp.Image = CType(resources.GetObject("btnHelp.Image"), System.Drawing.Image)
+        Me.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHelp.Location = New System.Drawing.Point(14, 421)
+        Me.btnHelp.Name = "btnHelp"
+        Me.btnHelp.Size = New System.Drawing.Size(208, 50)
+        Me.btnHelp.TabIndex = 193
+        Me.btnHelp.Text = "     Help"
+        Me.btnHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnHelp.UseVisualStyleBackColor = False
         '
         'btnLogout
         '
@@ -433,8 +473,10 @@ Partial Class menuutama
     Friend WithEvents btnTransaksi As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnMinimize As System.Windows.Forms.Button
+    Friend WithEvents btnClose As System.Windows.Forms.Button
     Friend WithEvents btnLogout As System.Windows.Forms.Button
+    Friend WithEvents btnAbout As System.Windows.Forms.Button
+    Friend WithEvents btnHelp As System.Windows.Forms.Button
 
 End Class

@@ -97,4 +97,31 @@
             Me.Show()
         End If
     End Sub
+
+    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
+        Try
+            Me.WindowState = FormWindowState.Minimized
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Try
+            If MsgBox("Tutup Aplikasi", MsgBoxStyle.YesNo, "Information") = MsgBoxResult.Yes Then
+                Me.Close()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        
+    End Sub
+
+    Private Sub btnAbout_Click(sender As Object, e As EventArgs) Handles btnAbout.Click
+
+    End Sub
+    Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
+
+    End Sub
 End Class

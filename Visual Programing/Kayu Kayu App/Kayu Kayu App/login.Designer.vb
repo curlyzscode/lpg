@@ -24,13 +24,12 @@ Partial Class login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(login))
         Me.lbUsername = New System.Windows.Forms.Label()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.lbPassword = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.PnLogin = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnMinimize = New System.Windows.Forms.Button()
+        Me.btnClose = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnMinimized = New System.Windows.Forms.Button()
@@ -41,6 +40,7 @@ Partial Class login
         Me.cmbStatusLogin = New System.Windows.Forms.ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.PnLogin.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictUserLogin, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,14 +58,6 @@ Partial Class login
         Me.lbUsername.Size = New System.Drawing.Size(79, 19)
         Me.lbUsername.TabIndex = 0
         Me.lbUsername.Text = "Username"
-        '
-        'txtUsername
-        '
-        Me.txtUsername.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(60, 339)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(177, 26)
-        Me.txtUsername.TabIndex = 1
         '
         'lbPassword
         '
@@ -105,8 +97,8 @@ Partial Class login
         'PnLogin
         '
         Me.PnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(8, Byte), Integer))
-        Me.PnLogin.Controls.Add(Me.Button3)
-        Me.PnLogin.Controls.Add(Me.Button4)
+        Me.PnLogin.Controls.Add(Me.btnMinimize)
+        Me.PnLogin.Controls.Add(Me.btnClose)
         Me.PnLogin.Controls.Add(Me.PictureBox2)
         Me.PnLogin.Controls.Add(Me.Button1)
         Me.PnLogin.Controls.Add(Me.btnMinimized)
@@ -117,33 +109,33 @@ Partial Class login
         Me.PnLogin.Size = New System.Drawing.Size(602, 32)
         Me.PnLogin.TabIndex = 192
         '
-        'Button3
+        'btnMinimize
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.Button3.Location = New System.Drawing.Point(515, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(40, 25)
-        Me.Button3.TabIndex = 195
-        Me.Button3.Text = "_"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnMinimize.BackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(22, Byte), Integer))
+        Me.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMinimize.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMinimize.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnMinimize.Location = New System.Drawing.Point(515, 3)
+        Me.btnMinimize.Name = "btnMinimize"
+        Me.btnMinimize.Size = New System.Drawing.Size(40, 25)
+        Me.btnMinimize.TabIndex = 195
+        Me.btnMinimize.Text = "_"
+        Me.btnMinimize.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btnClose
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.Button4.Location = New System.Drawing.Point(555, 3)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(40, 25)
-        Me.Button4.TabIndex = 196
-        Me.Button4.Text = "X"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btnClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(22, Byte), Integer))
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClose.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnClose.Location = New System.Drawing.Point(555, 3)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(40, 25)
+        Me.btnClose.TabIndex = 196
+        Me.btnClose.Text = "X"
+        Me.btnClose.UseVisualStyleBackColor = False
         '
         'PictureBox2
         '
@@ -242,8 +234,8 @@ Partial Class login
         Me.cmbStatusLogin.Location = New System.Drawing.Point(60, 272)
         Me.cmbStatusLogin.Name = "cmbStatusLogin"
         Me.cmbStatusLogin.Size = New System.Drawing.Size(174, 27)
-        Me.cmbStatusLogin.TabIndex = 196
-        Me.cmbStatusLogin.Text = "               Status"
+        Me.cmbStatusLogin.TabIndex = 1
+        Me.cmbStatusLogin.Text = "Status"
         '
         'PictureBox1
         '
@@ -266,11 +258,20 @@ Partial Class login
         Me.PictureBox3.TabIndex = 198
         Me.PictureBox3.TabStop = False
         '
+        'txtUsername
+        '
+        Me.txtUsername.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsername.Location = New System.Drawing.Point(60, 334)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(177, 26)
+        Me.txtUsername.TabIndex = 2
+        '
         'login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(259, 517)
+        Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.cmbStatusLogin)
@@ -280,7 +281,6 @@ Partial Class login
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.lbPassword)
-        Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.lbUsername)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "login"
@@ -297,7 +297,6 @@ Partial Class login
 
     End Sub
     Friend WithEvents lbUsername As System.Windows.Forms.Label
-    Friend WithEvents txtUsername As System.Windows.Forms.TextBox
     Friend WithEvents lbPassword As System.Windows.Forms.Label
     Friend WithEvents btnLogin As System.Windows.Forms.Button
     Friend WithEvents txtPassword As System.Windows.Forms.TextBox
@@ -309,9 +308,10 @@ Partial Class login
     Friend WithEvents pictUserLogin As System.Windows.Forms.PictureBox
     Friend WithEvents pictLockLogin As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents btnMinimize As System.Windows.Forms.Button
+    Friend WithEvents btnClose As System.Windows.Forms.Button
     Friend WithEvents cmbStatusLogin As System.Windows.Forms.ComboBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents txtUsername As System.Windows.Forms.TextBox
 End Class

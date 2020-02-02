@@ -23,9 +23,9 @@ Partial Class konter
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(konter))
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtNoHp = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtAlamat = New System.Windows.Forms.TextBox()
@@ -50,6 +50,7 @@ Partial Class konter
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.txtNik = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmbKriteria = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvKonter, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
@@ -152,7 +153,7 @@ Partial Class konter
         Me.btnCari.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCari.ForeColor = System.Drawing.Color.White
         Me.btnCari.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnCari.Location = New System.Drawing.Point(562, 491)
+        Me.btnCari.Location = New System.Drawing.Point(698, 492)
         Me.btnCari.Name = "btnCari"
         Me.btnCari.Size = New System.Drawing.Size(106, 28)
         Me.btnCari.TabIndex = 238
@@ -310,27 +311,27 @@ Partial Class konter
         Me.dgvKonter.AllowUserToResizeColumns = False
         Me.dgvKonter.AllowUserToResizeRows = False
         Me.dgvKonter.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvKonter.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvKonter.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvKonter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvKonter.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvKonter.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvKonter.EnableHeadersVisualStyles = False
         Me.dgvKonter.Location = New System.Drawing.Point(45, 250)
         Me.dgvKonter.Name = "dgvKonter"
         Me.dgvKonter.ReadOnly = True
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvKonter.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvKonter.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvKonter.Size = New System.Drawing.Size(835, 236)
         Me.dgvKonter.TabIndex = 236
         '
@@ -338,7 +339,7 @@ Partial Class konter
         '
         Me.txtCari.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCari.ForeColor = System.Drawing.Color.Gray
-        Me.txtCari.Location = New System.Drawing.Point(46, 492)
+        Me.txtCari.Location = New System.Drawing.Point(182, 493)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(516, 26)
         Me.txtCari.TabIndex = 237
@@ -376,11 +377,23 @@ Partial Class konter
         Me.Label2.Text = "NIK"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'cmbKriteria
+        '
+        Me.cmbKriteria.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbKriteria.FormattingEnabled = True
+        Me.cmbKriteria.Items.AddRange(New Object() {"Username", "Status", "Nama", "Bagian", "Jenis Kelamin", "Tanggal Lahir", "Alamat"})
+        Me.cmbKriteria.Location = New System.Drawing.Point(46, 492)
+        Me.cmbKriteria.Name = "cmbKriteria"
+        Me.cmbKriteria.Size = New System.Drawing.Size(131, 27)
+        Me.cmbKriteria.TabIndex = 261
+        Me.cmbKriteria.Text = "Kriteria"
+        '
         'konter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(920, 532)
+        Me.Controls.Add(Me.cmbKriteria)
         Me.Controls.Add(Me.txtNik)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtNoHp)
@@ -438,4 +451,5 @@ Partial Class konter
     Friend WithEvents Panel9 As System.Windows.Forms.Panel
     Friend WithEvents txtNik As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents cmbKriteria As System.Windows.Forms.ComboBox
 End Class

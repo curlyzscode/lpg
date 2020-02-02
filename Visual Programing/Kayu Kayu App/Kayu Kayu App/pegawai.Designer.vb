@@ -58,6 +58,9 @@ Partial Class pegawai
         Me.txtNoHp = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cmbJenisKelamin = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.cmbStatusKerja = New System.Windows.Forms.ComboBox()
+        Me.cmbKriteria = New System.Windows.Forms.ComboBox()
         CType(Me.dgvPegawai, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
@@ -71,10 +74,10 @@ Partial Class pegawai
         Me.btnCari.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCari.ForeColor = System.Drawing.Color.White
         Me.btnCari.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnCari.Location = New System.Drawing.Point(562, 491)
+        Me.btnCari.Location = New System.Drawing.Point(698, 491)
         Me.btnCari.Name = "btnCari"
         Me.btnCari.Size = New System.Drawing.Size(106, 28)
-        Me.btnCari.TabIndex = 203
+        Me.btnCari.TabIndex = 241
         Me.btnCari.Text = "&Cari"
         Me.btnCari.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnCari.UseVisualStyleBackColor = False
@@ -91,7 +94,7 @@ Partial Class pegawai
         Me.btnSimpan.Location = New System.Drawing.Point(159, 272)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(115, 35)
-        Me.btnSimpan.TabIndex = 197
+        Me.btnSimpan.TabIndex = 234
         Me.btnSimpan.Text = "&Simpan"
         Me.btnSimpan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSimpan.UseVisualStyleBackColor = False
@@ -108,7 +111,7 @@ Partial Class pegawai
         Me.btnBatal.Location = New System.Drawing.Point(504, 272)
         Me.btnBatal.Name = "btnBatal"
         Me.btnBatal.Size = New System.Drawing.Size(115, 35)
-        Me.btnBatal.TabIndex = 200
+        Me.btnBatal.TabIndex = 237
         Me.btnBatal.Text = "&Batal"
         Me.btnBatal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnBatal.UseVisualStyleBackColor = False
@@ -125,7 +128,7 @@ Partial Class pegawai
         Me.btnHapus.Location = New System.Drawing.Point(389, 272)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(115, 35)
-        Me.btnHapus.TabIndex = 199
+        Me.btnHapus.TabIndex = 236
         Me.btnHapus.Text = "&Hapus"
         Me.btnHapus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnHapus.UseVisualStyleBackColor = False
@@ -142,7 +145,7 @@ Partial Class pegawai
         Me.btnTambah.Location = New System.Drawing.Point(44, 272)
         Me.btnTambah.Name = "btnTambah"
         Me.btnTambah.Size = New System.Drawing.Size(115, 35)
-        Me.btnTambah.TabIndex = 190
+        Me.btnTambah.TabIndex = 233
         Me.btnTambah.Text = "&Tambah"
         Me.btnTambah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnTambah.UseVisualStyleBackColor = False
@@ -159,7 +162,7 @@ Partial Class pegawai
         Me.btnEdit.Location = New System.Drawing.Point(274, 272)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(115, 35)
-        Me.btnEdit.TabIndex = 198
+        Me.btnEdit.TabIndex = 235
         Me.btnEdit.Text = "&Edit"
         Me.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnEdit.UseVisualStyleBackColor = False
@@ -215,16 +218,16 @@ Partial Class pegawai
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvPegawai.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvPegawai.Size = New System.Drawing.Size(835, 173)
-        Me.dgvPegawai.TabIndex = 201
+        Me.dgvPegawai.TabIndex = 238
         '
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCari.ForeColor = System.Drawing.Color.Gray
-        Me.txtCari.Location = New System.Drawing.Point(46, 492)
+        Me.txtCari.Location = New System.Drawing.Point(182, 492)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(516, 26)
-        Me.txtCari.TabIndex = 202
+        Me.txtCari.TabIndex = 240
         '
         'PictureBox1
         '
@@ -379,7 +382,7 @@ Partial Class pegawai
         Me.txtTempatLahir.MaxLength = 20
         Me.txtTempatLahir.Name = "txtTempatLahir"
         Me.txtTempatLahir.Size = New System.Drawing.Size(150, 23)
-        Me.txtTempatLahir.TabIndex = 220
+        Me.txtTempatLahir.TabIndex = 221
         '
         'Label6
         '
@@ -420,7 +423,7 @@ Partial Class pegawai
         Me.txtAlamat.MaxLength = 100
         Me.txtAlamat.Multiline = True
         Me.txtAlamat.Name = "txtAlamat"
-        Me.txtAlamat.Size = New System.Drawing.Size(277, 90)
+        Me.txtAlamat.Size = New System.Drawing.Size(311, 54)
         Me.txtAlamat.TabIndex = 225
         '
         'Label8
@@ -439,7 +442,7 @@ Partial Class pegawai
         Me.txtNoHp.BackColor = System.Drawing.Color.White
         Me.txtNoHp.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNoHp.ForeColor = System.Drawing.Color.Black
-        Me.txtNoHp.Location = New System.Drawing.Point(569, 216)
+        Me.txtNoHp.Location = New System.Drawing.Point(569, 180)
         Me.txtNoHp.MaxLength = 13
         Me.txtNoHp.Name = "txtNoHp"
         Me.txtNoHp.Size = New System.Drawing.Size(166, 23)
@@ -449,7 +452,7 @@ Partial Class pegawai
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(439, 216)
+        Me.Label9.Location = New System.Drawing.Point(439, 180)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(42, 15)
         Me.Label9.TabIndex = 228
@@ -464,13 +467,48 @@ Partial Class pegawai
         Me.cmbJenisKelamin.Location = New System.Drawing.Point(166, 209)
         Me.cmbJenisKelamin.Name = "cmbJenisKelamin"
         Me.cmbJenisKelamin.Size = New System.Drawing.Size(150, 23)
-        Me.cmbJenisKelamin.TabIndex = 229
+        Me.cmbJenisKelamin.TabIndex = 220
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(439, 212)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(71, 15)
+        Me.Label10.TabIndex = 231
+        Me.Label10.Text = "Status Kerja"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'cmbStatusKerja
+        '
+        Me.cmbStatusKerja.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbStatusKerja.FormattingEnabled = True
+        Me.cmbStatusKerja.Items.AddRange(New Object() {"Aktif", "Tidak Aktif"})
+        Me.cmbStatusKerja.Location = New System.Drawing.Point(569, 209)
+        Me.cmbStatusKerja.Name = "cmbStatusKerja"
+        Me.cmbStatusKerja.Size = New System.Drawing.Size(122, 23)
+        Me.cmbStatusKerja.TabIndex = 232
+        '
+        'cmbKriteria
+        '
+        Me.cmbKriteria.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbKriteria.FormattingEnabled = True
+        Me.cmbKriteria.Items.AddRange(New Object() {"Username", "Status", "Nama", "Bagian", "Jenis Kelamin", "Tanggal Lahir", "Alamat"})
+        Me.cmbKriteria.Location = New System.Drawing.Point(45, 491)
+        Me.cmbKriteria.Name = "cmbKriteria"
+        Me.cmbKriteria.Size = New System.Drawing.Size(131, 27)
+        Me.cmbKriteria.TabIndex = 239
+        Me.cmbKriteria.Text = "Kriteria"
         '
         'pegawai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(920, 532)
+        Me.Controls.Add(Me.cmbKriteria)
+        Me.Controls.Add(Me.cmbStatusKerja)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.cmbJenisKelamin)
         Me.Controls.Add(Me.txtNoHp)
         Me.Controls.Add(Me.Label9)
@@ -544,4 +582,7 @@ Partial Class pegawai
     Friend WithEvents txtNoHp As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents cmbJenisKelamin As System.Windows.Forms.ComboBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents cmbStatusKerja As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbKriteria As System.Windows.Forms.ComboBox
 End Class

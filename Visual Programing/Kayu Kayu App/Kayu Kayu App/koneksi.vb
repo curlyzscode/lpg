@@ -15,7 +15,7 @@ Module koneksi
     Sub KoneksiBuka()
         conn = New MySqlConnection
 
-        conn.ConnectionString = "server=localhost;user=root;password=;database=kayukayu"
+        conn.ConnectionString = "server=localhost;user=root;password=;database=kayukayu;Convert Zero Datetime=True"
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()

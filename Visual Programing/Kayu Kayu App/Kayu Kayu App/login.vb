@@ -5,7 +5,6 @@ Public Class login
 
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         KoneksiBuka()
-        txtUsername.MaxLength = 8
         txtPassword.PasswordChar = "*"
         txtUsername.Clear()
         txtPassword.Clear()
@@ -57,4 +56,25 @@ Public Class login
             End If
         End If
     End Sub
+
+    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
+        Try
+            Me.WindowState = FormWindowState.Minimized
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Try
+            If MsgBox("Tutup Aplikasi", MsgBoxStyle.YesNo, "Information") = MsgBoxResult.Yes Then
+                Me.Close()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+       
+    End Sub
+
 End Class

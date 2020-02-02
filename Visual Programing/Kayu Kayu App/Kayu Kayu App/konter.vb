@@ -183,6 +183,7 @@ Public Class konter
 
             tampildata()
             txtCari.Text = ""
+            cmbKriteria.Text = "Kategori"
             statustombol(True, True, True, True, True)
             statusinput(False, False, False, False, False, False)
             kondisi_bersih()
@@ -210,28 +211,123 @@ Public Class konter
             MsgBox("Parameter tidak boleh kosong", MsgBoxStyle.Critical, "Info")
             txtCari.Focus()
         Else
-            Try
-                Dim qSearch As String
-                qSearch = "select * from konter where nama_konter like '%" & txtCari.Text & "%'"
-                cmd.CommandType = CommandType.Text
-                cmd.CommandText = qSearch
-                cmd.Connection = conn
+            If cmbKriteria.Text = "ID Konter" Then
+                Try
+                    Dim qSearch As String
+                    qSearch = "select * from konter where id_konter like '%" & txtCari.Text & "%'"
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = qSearch
+                    cmd.Connection = conn
 
-                rd = cmd.ExecuteReader
+                    rd = cmd.ExecuteReader
 
-                Using dt As New DataTable
-                    dt.Load(rd)
-                    If dt.Rows.Count = 0 Then
-                        'DataGridView1.DataSource = Nothing
-                        MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
-                    Else
-                        dgvKonter.AutoGenerateColumns = False
-                        dgvKonter.DataSource = dt
-                    End If
-                End Using
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
+                    Using dt As New DataTable
+                        dt.Load(rd)
+                        If dt.Rows.Count = 0 Then
+                            'DataGridView1.DataSource = Nothing
+                            MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
+                        Else
+                            dgvKonter.AutoGenerateColumns = False
+                            dgvKonter.DataSource = dt
+                        End If
+                    End Using
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+
+            ElseIf cmbKriteria.Text = "Nama Konter" Then
+                Try
+                    Dim qSearch As String
+                    qSearch = "select * from konter where nama_konter like '%" & txtCari.Text & "%'"
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = qSearch
+                    cmd.Connection = conn
+
+                    rd = cmd.ExecuteReader
+
+                    Using dt As New DataTable
+                        dt.Load(rd)
+                        If dt.Rows.Count = 0 Then
+                            'DataGridView1.DataSource = Nothing
+                            MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
+                        Else
+                            dgvKonter.AutoGenerateColumns = False
+                            dgvKonter.DataSource = dt
+                        End If
+                    End Using
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            ElseIf cmbKriteria.Text = "Owner" Then
+                Try
+                    Dim qSearch As String
+                    qSearch = "select * from konter where owner like '%" & txtCari.Text & "%'"
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = qSearch
+                    cmd.Connection = conn
+
+                    rd = cmd.ExecuteReader
+
+                    Using dt As New DataTable
+                        dt.Load(rd)
+                        If dt.Rows.Count = 0 Then
+                            'DataGridView1.DataSource = Nothing
+                            MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
+                        Else
+                            dgvKonter.AutoGenerateColumns = False
+                            dgvKonter.DataSource = dt
+                        End If
+                    End Using
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            ElseIf cmbKriteria.Text = "NIK" Then
+                Try
+                    Dim qSearch As String
+                    qSearch = "select * from konter where nik like '%" & txtCari.Text & "%'"
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = qSearch
+                    cmd.Connection = conn
+
+                    rd = cmd.ExecuteReader
+
+                    Using dt As New DataTable
+                        dt.Load(rd)
+                        If dt.Rows.Count = 0 Then
+                            'DataGridView1.DataSource = Nothing
+                            MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
+                        Else
+                            dgvKonter.AutoGenerateColumns = False
+                            dgvKonter.DataSource = dt
+                        End If
+                    End Using
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            ElseIf cmbKriteria.Text = "Alamat" Then
+                Try
+                    Dim qSearch As String
+                    qSearch = "select * from konter where alamat like '%" & txtCari.Text & "%'"
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = qSearch
+                    cmd.Connection = conn
+
+                    rd = cmd.ExecuteReader
+
+                    Using dt As New DataTable
+                        dt.Load(rd)
+                        If dt.Rows.Count = 0 Then
+                            'DataGridView1.DataSource = Nothing
+                            MsgBox("Data tidak Ditemukan", MsgBoxStyle.Information, "Information")
+                        Else
+                            dgvKonter.AutoGenerateColumns = False
+                            dgvKonter.DataSource = dt
+                        End If
+                    End Using
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            End If
         End If
     End Sub
 End Class
