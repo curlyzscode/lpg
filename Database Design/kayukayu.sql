@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 02, 2020 at 09:33 AM
+-- Generation Time: Feb 05, 2020 at 01:14 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -76,7 +76,9 @@ INSERT INTO `detail_transaksi` (`id_detail_transaksi`, `id_transaksi`, `id_menu`
 (93, '2002010008', 'A0001', 'Kopi', 'Minuman', 10, 5000, 4, 20000, 'Berhasil'),
 (94, '2002020001', 'A0002', 'Teh Manis', 'Minuman', 15, 4000, 2, 8000, 'Berhasil'),
 (95, '2002020001', 'C0001', 'Suki', 'Makanan', 3, 20000, 1, 20000, 'Refund'),
-(101, '2002020002', 'c0001', 'Suki', 'Makanan', 3, 20000, 2, 40000, 'Berhasil');
+(101, '2002020002', 'c0001', 'Suki', 'Makanan', 3, 20000, 2, 40000, 'Berhasil'),
+(104, '2002050001', 'A0001', 'Kopi', 'Minuman', 10, 5000, 2, 10000, 'Berhasil'),
+(105, '2002050001', 'B0001', 'Bakso', 'Makanan', 10, 13000, 2, 26000, 'Berhasil');
 
 -- --------------------------------------------------------
 
@@ -175,7 +177,7 @@ CREATE TABLE `transaksi` (
   `nama_pelanggan` varchar(50) NOT NULL,
   `no_meja` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `diskon` int(11) NOT NULL,
+  `diskon` varchar(3) NOT NULL,
   `total_bayar` double NOT NULL,
   `pembayaran` double NOT NULL,
   `kembalian` double NOT NULL
@@ -186,16 +188,17 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id_transaksi`, `tanggal_transaksi`, `waktu_transaksi`, `nama_pelanggan`, `no_meja`, `username`, `diskon`, `total_bayar`, `pembayaran`, `kembalian`) VALUES
-('2002010001', '0000-00-00', '11:59:27', 'Tia', 5, 'tiacahyantri', 2, 58800, 60000, 1200),
-('2002010002', '0000-00-00', '13:01:40', 'Kiki', 1, 'tiacahyantri', 0, 36000, 40000, 4000),
-('2002010003', '0000-00-00', '15:37:44', 'Mamah', 3, 'tiacahyantri', 5, 34200, 35000, 800),
-('2002010004', '0000-00-00', '00:00:00', 'Huu', 3, 'tiacahyantri', 0, 10000, 10000, 0),
-('2002010005', '0000-00-00', '15:46:39', 'Bibi', 3, 'tiacahyantri', 0, 10000, 10000, 0),
-('2002010006', '0000-00-00', '15:48:11', 'Hii', 2, 'tiacahyantri', 0, 8000, 10000, 2000),
-('2002010007', '0000-00-00', '15:51:20', 'Tia', 3, 'tiacahyantri', 0, 12000, 15000, 3000),
-('2002010008', '0000-00-00', '15:53:31', 'Tia', 3, 'tiacahyantri', 0, 20000, 20000, 0),
-('2002020001', '0000-00-00', '10:54:36', 'Tia', 4, 'tiacahyantri', 4, 46080, 50000, 3920),
-('2002020002', '2020-02-02', '11:40:25', 'FGHF', 3, '', 2, 39200, 40000, 800);
+('2002010001', '0000-00-00', '11:59:27', 'Tia', 5, 'tiacahyantri', '2', 58800, 60000, 1200),
+('2002010002', '0000-00-00', '13:01:40', 'Kiki', 1, 'tiacahyantri', '0', 36000, 40000, 4000),
+('2002010003', '0000-00-00', '15:37:44', 'Mamah', 3, 'tiacahyantri', '5', 34200, 35000, 800),
+('2002010004', '0000-00-00', '00:00:00', 'Huu', 3, 'tiacahyantri', '0', 10000, 10000, 0),
+('2002010005', '0000-00-00', '15:46:39', 'Bibi', 3, 'tiacahyantri', '0', 10000, 10000, 0),
+('2002010006', '0000-00-00', '15:48:11', 'Hii', 2, 'tiacahyantri', '0', 8000, 10000, 2000),
+('2002010007', '0000-00-00', '15:51:20', 'Tia', 3, 'tiacahyantri', '0', 12000, 15000, 3000),
+('2002010008', '0000-00-00', '15:53:31', 'Tia', 3, 'tiacahyantri', '0', 20000, 20000, 0),
+('2002020001', '0000-00-00', '10:54:36', 'Tia', 4, 'tiacahyantri', '4', 46080, 50000, 3920),
+('2002020002', '2020-02-02', '11:40:25', 'FGHF', 3, '', '2', 39200, 40000, 800),
+('2002050001', '2020-02-05', '00:25:48', 'Nuryanto', 2, '', '7', 33480, 40000, 6520);
 
 -- --------------------------------------------------------
 
@@ -287,7 +290,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `detail_transaksi`
 --
 ALTER TABLE `detail_transaksi`
-  MODIFY `id_detail_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+  MODIFY `id_detail_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 
 --
 -- AUTO_INCREMENT for table `refund`
