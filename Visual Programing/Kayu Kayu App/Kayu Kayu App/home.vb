@@ -75,4 +75,6 @@ Public Class home
             MsgBox("Terjadi kesalahan! " & ex.Message)
         End Try
     End Sub
+
+
 End Class

@@ -1,4 +1,9 @@
-﻿Public Class laporan
+﻿
+
+Public Class laporan
+
+
+   
 
 
 End Class

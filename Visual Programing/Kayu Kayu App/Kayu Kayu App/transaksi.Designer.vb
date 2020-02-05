@@ -43,12 +43,12 @@ Partial Class transaksi
         Me.dgvTransaksi = New System.Windows.Forms.DataGridView()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.cmbDiskon = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtKembalian = New System.Windows.Forms.TextBox()
         Me.txtPembayaran = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.cmbDiskon = New System.Windows.Forms.ComboBox()
         Me.btnProses = New System.Windows.Forms.Button()
         Me.btnBatal = New System.Windows.Forms.Button()
         Me.txtIdMenu = New System.Windows.Forms.TextBox()
@@ -295,16 +295,6 @@ Partial Class transaksi
         Me.Label7.Text = "%"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'cmbDiskon
-        '
-        Me.cmbDiskon.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbDiskon.FormattingEnabled = True
-        Me.cmbDiskon.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
-        Me.cmbDiskon.Location = New System.Drawing.Point(20, 54)
-        Me.cmbDiskon.Name = "cmbDiskon"
-        Me.cmbDiskon.Size = New System.Drawing.Size(63, 23)
-        Me.cmbDiskon.TabIndex = 279
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -367,6 +357,16 @@ Partial Class transaksi
         Me.Label6.TabIndex = 273
         Me.Label6.Text = "PEMBAYARAN"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'cmbDiskon
+        '
+        Me.cmbDiskon.Font = New System.Drawing.Font("Cambria", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbDiskon.FormattingEnabled = True
+        Me.cmbDiskon.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
+        Me.cmbDiskon.Location = New System.Drawing.Point(20, 54)
+        Me.cmbDiskon.Name = "cmbDiskon"
+        Me.cmbDiskon.Size = New System.Drawing.Size(63, 23)
+        Me.cmbDiskon.TabIndex = 279
         '
         'btnProses
         '
