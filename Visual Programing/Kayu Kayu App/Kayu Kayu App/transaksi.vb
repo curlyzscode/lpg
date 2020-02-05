@@ -169,12 +169,26 @@ Public Class transaksi
         
     End Sub
 
+    Sub mouse()
+        If txtIdMenu.Text = "" Then
+            txtIdMenu.Text = "ID Menu"
+            txtIdMenu.ForeColor = Color.Maroon
+        End If
+
+        If txtQTY.Text = "" Then
+            txtQTY.Text = "QTY"
+            txtQTY.ForeColor = Color.Maroon
+        End If
+    End Sub
+
     Private Sub transaksi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             KoneksiBuka()
             NoFaktur()
             tampildata()
             total_bayar()
+            mouse()
+
 
             txtPembayaran.Text = ""
             txtKembalian.Text = "0"
@@ -184,6 +198,8 @@ Public Class transaksi
             txtNamaPelanggan.Focus()
             lblUsername.Text = home.lblUsername.Text
             lblTanggal.Text = Format(Now, "yyyy-MM-dd")
+
+            
 
             statusinput(False, True, False, False, False, False, True, False, False, True, True, False, False, False, False)
         Catch ex As Exception
@@ -393,6 +409,7 @@ Public Class transaksi
         Try
             kondisi_bersih_detail()
             txtIdMenu.Focus()
+            mouse()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -406,6 +423,7 @@ Public Class transaksi
                 kondisi_bersih_transaksi()
                 bersih_grid()
                 hapus_grid()
+                mouse()
 
                 txtNamaPelanggan.Focus()
             End If
@@ -428,11 +446,38 @@ Public Class transaksi
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
-
     End Sub
 
     Private Sub txtPembayaran_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPembayaran.KeyPress
         If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
     End Sub
+
+    Private Sub txtIdMenu_MouseLeave(sender As Object, e As EventArgs) Handles txtIdMenu.MouseLeave
+        If txtIdMenu.Text = "" Then
+            txtIdMenu.Text = "ID Menu"
+            txtIdMenu.ForeColor = Color.Maroon
+        End If
+    End Sub
+
+    Private Sub txtIdMenu_MouseEnter(sender As Object, e As EventArgs) Handles txtIdMenu.MouseEnter
+        If txtIdMenu.Text = "ID Menu" Then
+            txtIdMenu.Text = ""
+            txtIdMenu.ForeColor = Color.Maroon
+        End If
+    End Sub
+
+    Private Sub txtQTY_MouseLeave(sender As Object, e As EventArgs) Handles txtQTY.MouseLeave
+        If txtQTY.Text = "" Then
+            txtQTY.Text = "QTY"
+            txtQTY.ForeColor = Color.Maroon
+        End If
+    End Sub
+
+    Private Sub txtQTY_MouseEnter(sender As Object, e As EventArgs) Handles txtQTY.MouseEnter
+        If txtQTY.Text = "QTY" Then
+            txtQTY.Text = ""
+            txtQTY.ForeColor = Color.Maroon
+        End If
+    End Sub
+
 End Class

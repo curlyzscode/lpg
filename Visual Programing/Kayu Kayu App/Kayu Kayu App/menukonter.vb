@@ -449,7 +449,7 @@ Public Class menukonter
 
             cmd = New MySqlCommand
             cmd.Connection = conn
-            str = "select * from menu where left(id_konter,1) = '" & cmbIdKonter.Text & "' in (select max(id_konter) from menu) order by id_konter DESC"
+            str = "select * from menu where left(id_menu,1) = '" & cmbIdKonter.Text & "' in (select max(id_menu) from menu) order by id_menu DESC"
             cmd.CommandText = str
 
             rd = cmd.ExecuteReader

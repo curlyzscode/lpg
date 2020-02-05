@@ -119,9 +119,23 @@
     End Sub
 
     Private Sub btnAbout_Click(sender As Object, e As EventArgs) Handles btnAbout.Click
-
+        Try
+            PanelUtama.Controls.Clear()
+            about.TopLevel = False
+            PanelUtama.Controls.Add(about)
+            about.Show()
+        Catch ex As Exception
+            MsgBox("Terjadi kesalahan! " & ex.Message)
+        End Try
     End Sub
     Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
-
+        Try
+            PanelUtama.Controls.Clear()
+            help.TopLevel = False
+            PanelUtama.Controls.Add(help)
+            help.Show()
+        Catch ex As Exception
+            MsgBox("Terjadi kesalahan! " & ex.Message)
+        End Try
     End Sub
 End Class
